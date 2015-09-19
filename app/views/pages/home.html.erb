@@ -3,5 +3,8 @@
 	<h1>The Boating App</h1>
 	<p>
 	<%= link_to	"New Boater? Sign-up...", new_user_registration_path, class: "btn btn-primary btn-lg" %> 
+	<%= link_to "Log in", new_user_session_path, class: "btn btn-success btn-lg" %> 
+	<%= link_to	"Sign-out", destroy_user_session_path, method: :delete, class: "btn btn-primary btn-lg" %> 
+
 	</p>
 </div>
