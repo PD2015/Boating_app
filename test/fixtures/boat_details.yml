@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  boat_make: MyText
+  boat-manufacturing_code: MyText
+  boat_model: MyText
+  boat_color: MyText
+
+two:
+  boat_make: MyText
+  boat-manufacturing_code: MyText
+  boat_model: MyText
+  boat_color: MyText

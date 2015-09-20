@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Boat Details</h1>
+
+<table class= "table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Boat make</th>
+      <th>Boat manufacturing code</th>
+      <th>Boat model</th>
+      <th>Boat color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boat_details.each do |boat_detail| %>
+      <tr>
+        <td><%= boat_detail.boat_make %></td>
+        <td><%= boat_detail.boat_manufacturing_code %></td>
+        <td><%= boat_detail.boat_model %></td>
+        <td><%= boat_detail.boat_color %></td>
+        <td><%= link_to 'Show', boat_detail %></td>
+        <td><%= link_to 'Edit', edit_boat_detail_path(boat_detail) %></td>
+        <td><%= link_to 'Destroy', boat_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Boat detail', new_boat_detail_path %>

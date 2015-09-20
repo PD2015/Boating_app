@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<div class= "jumbotron center">
+  <h1>Create a profile that will show your contact details when somone searches for your kit.</h1>
+</div>
+<body>
+  <div class= "container"> 
+    <table class= "table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Contact phone no</th>
+          <th>Emergency contact name</th>
+          <th>Emergency contact phone no</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @profiles.each do |profile| %>
+          <tr>
+            <td><%= profile.user_id %></td>
+            <td><%= profile.name %></td>
+            <td><%= profile.email %></td>
+            <td><%= profile.contact_phone_no %></td>
+            <td><%= profile.emergency_contact_name %></td>
+            <td><%= profile.emergency_contact_phone_no %></td>
+            <td><%= link_to 'Show', profile %></td>
+            <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+            <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</body>
+<br>
+
+<%= link_to 'New Profile', new_profile_path %>

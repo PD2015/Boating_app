@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Boat make:</strong>
+  <%= @boat_detail.boat_make %>
+</p>
+
+<p>
+  <strong>Boat manufacturing code:</strong>
+  <%= @boat_detail.boat_manufacturing_code %>
+</p>
+
+<p>
+  <strong>Boat model:</strong>
+  <%= @boat_detail.boat_model %>
+</p>
+
+<p>
+  <strong>Boat color:</strong>
+  <%= @boat_detail.boat_color %>
+</p>
+
+<%= link_to 'Edit', edit_boat_detail_path(@boat_detail) %> |
+<%= link_to 'Back', boat_details_path %>

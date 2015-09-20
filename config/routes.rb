@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   
+  resources :profiles
+  resources :boat_details
   devise_for :users
   root 'pages#home'
-  get "dashboard" => "pages#dashboard"
+  get "profile" => "pages#profile"
   
 
 
